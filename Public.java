@@ -55,7 +55,7 @@ class Public {
                     case 4:
                         System.out.println("(a) Forest, agricultural, residential and industrial areas will be determined on the basis of risk of climate change impacts while formulating land use plan at local level. ");
                         System.out.println("(b) Adaptation programs will be conducted to mitigate adverse effects of climate change on households and communities residing in unplanned urban and rural settlements and areas prone to climate-induced risks.");
-                        System.out.println("(c) Low emission technologies and adaptation programs will be inc orporated in settlement development plans. ");
+                        System.out.println("(c) Low emission technologies and adaptation programs will be incorporated in settlement development plans. ");
                         System.out.println("(d) Standards will be developed and implemented to make rural and urban settlement infrastructures and buildings systematic.");
                         break;
                     case 5:
@@ -67,14 +67,14 @@ class Public {
                     case 6:
                         System.out.println("(a) Concepts of climate-friendly tourism like eco-tourism, green trekking route and diversification of tourist destinations will be mainstreamed into development of tourism sector.");
                         System.out.println("(b) Concept of zero emission will be implemented by promoting the use of renewable energy and energy efficient technologies in tourist spots.");
-                        System.out.println("(c) Transmission of weather forecast information will be systematizedby targeting mountaineering and trekking to make the tourism business r-eliable and safe.");
+                        System.out.println("(c) Transmission of weather forecast information will be systematized by targeting mountaineering and trekking to make the tourism business reliable and safe.");
                         System.out.println("(d) Natural and cultural heritages that are at risk of adverse impacts of climate change will be identified and such areas will be conserved and managed.");
                         break;
                     default:
                         System.out.println("Invalid Input.");
                         break;
                 }
-           
+
             } else if (a == 3) {
                 System.out.println("For ensuring proper implementation of SDG 13 Policies and Strategies, Federal, Province and Local Level Government play various important roles: ");
                 System.out.println("(1) At the federal level, responsibilities include formulating laws, standards, and a National Adaptation Plan, developing and implementing climate change programs, internationally updating national data, and participating in global climate forums and processes.");
