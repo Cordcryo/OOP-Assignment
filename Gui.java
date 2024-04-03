@@ -17,9 +17,10 @@ public class Gui {
             input = scanner.nextLine().toLowerCase();
             if (input.equals("exit")) {
                 break;
-            }
+            }else{
             login(scanner); // Pass Scanner object to the login method
-        }
+                input = scanner.nextLine().toLowerCase();
+            }}
         scanner.close();
     }
 
