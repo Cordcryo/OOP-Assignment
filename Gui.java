@@ -1,4 +1,5 @@
 package IIMScollege;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -56,24 +57,11 @@ public class Gui {
 
     // Modify userTask method to accept Scanner object
     private static void userTask(Scanner sc) {
-        // ...
-    }
-
-    private static void userTask() {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Welcome User");
-        System.out.println("What would you like to view?");
-        System.out.println("Enter 1 For Policy");
-        System.out.println("Enter 2 For Strategies");
-        System.out.println("Enter 3 For Planning");
-        int a = scan.nextInt();
-        if (a == 1) {
-            // Display policy content
-        } else if (a == 2) {
-            // Display strategy content
-        } else if (a == 3) {
-            // Display planning content
-        }
+        // Add the logic to handle user tasks
+
+        // Example: Display a simple message
+        System.out.println("You are in the user area.");
     }
 
     // Add getter and setter for Admin class instance
@@ -84,4 +72,14 @@ public class Gui {
     public void setAdmin(Admin admin) {
         this.admin = admin;
     }
-}
+
+    // Add authorization method
+    private static boolean authorization(String username, String password) {
+        return (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD))
+                || (username.equals(USER_USERNAME) && password.equals(USER_PASSWORD));
+    }
+
+    // Add method to getRole
+    private static String getRole(String username) {
+        return username.equals(ADMIN_USERNAME) ? "admin" : "user";
+    }
