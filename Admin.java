@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Admin {
+
     private List<String> strategies;
     private List<String> policies;
     private List<String> plans;
