@@ -266,4 +266,16 @@ public class Admin {
         Admin admin = new Admin();
         admin.runAdminFunctions();
     }
+
+    public void someAdminMethod() {
+
+    }
+
+    public List<String> getPlans() {
+    return plans;
+    }
+
+    public List<String>getPolicies() {
+    return policies;
+    }
 }
