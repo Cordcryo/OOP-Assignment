@@ -31,21 +31,21 @@ public class User {
     }
 
     private void displayPolicies(List<String> policies) {
-        System.out.println("Current Policies:");
+        System.out.println("\nCurrent Policies:");
         for (int i = 0; i < policies.size(); i++) {
             System.out.println(i + ": " + policies.get(i));
         }
     }
 
     private void displayStrategies(List<String> strategies) {
-        System.out.println("Current Strategies:");
+        System.out.println("\nCurrent Strategies:");
         for (int i = 0; i < strategies.size(); i++) {
             System.out.println(i + ": " + strategies.get(i));
         }
     }
 
     private void displayPlans(List<String> plans) {
-        System.out.println("Current Plans:");
+        System.out.println("\nCurrent Plans:");
         for (int i = 0; i < plans.size(); i++) {
             System.out.println(i + ": " + plans.get(i));
         }

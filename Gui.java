@@ -17,57 +17,43 @@ public class Gui {
             input = scanner.nextLine().toLowerCase();
             if (input.equals("exit")) {
                 break;
-            }else{
-            login(scanner); // Pass Scanner object to the login method
-                input = scanner.nextLine().toLowerCase();
-            }}
+            } else if (input.equals("login")) {
+                login(scanner); // Pass Scanner object to the login method
+            } else {
+                System.out.println("Invalid input. Please try again");
+            }
+        }
         scanner.close();
     }
 
-    // Modify the login method to accept Scanner object
     private static void login(Scanner sc) {
-        System.out.print(" Enter username");
-        String username = sc.next();
-        System.out.print(" Enter password");
-        String password = sc.next();
+        System.out.print("Enter username: ");
+        String username = sc.nextLine();
+        System.out.print("Enter password: ");
+        String password = sc.nextLine();
 
         if (authorization(username, password)) {
             System.out.println("Login Successful!");
             String role = getRole(username);
             System.out.println("You are logged in as " + role);
             if (role.equals("admin")) {
-                // Added Admin class instance
                 Admin admin = new Admin(); // Initialize Admin class instance
-                adminTask(admin); // Call adminTask with Admin and Scanner objects
-            } else {
-                userTask(); // Call userTask with Scanner object
+                admin.runAdminFunctions(); // Call admin functions
+            } else if (role.equals("user")){
+                User user = new User();
+                Admin admin = new Admin();
+                user.start(admin); // Call userTask with Admin object
             }
         } else {
             System.out.println("Invalid username or password. Try again!");
         }
     }
 
-    private static void adminTask(Admin admin) {
-        System.out.println("Welcome Admin");
-        admin.someAdminMethod();
-    }
-
-
-    private static void userTask() {
-        System.out.println("Welcome User");
-        // Add the logic to handle user tasks
-
-        // Example: Display a simple message
-        System.out.println("You are in the user area.");
-    }
-
-    // Add authorization method
     private static boolean authorization(String username, String password) {
         return (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD))
                 || (username.equals(USER_USERNAME) && password.equals(USER_PASSWORD));
     }
 
-    // Add method to getRole
     private static String getRole(String username) {
         return username.equals(ADMIN_USERNAME) ? "admin" : "user";
     }

@@ -17,17 +17,17 @@ public class Admin {
         plans = new ArrayList<>();
 
         // Add some default data for demonstration purposes
-        strategies.add("Strategy 1");
-        strategies.add("Strategy 2");
-        strategies.add("Strategy 3");
+        strategies.add("(a) Agriculture based adaptation programs will be conducted by targeting poor, marginalized, landless, indigenous people and vulnerable households, women and persons with disability.");
+        strategies.add("(b) Forest carbon sequestration will be increased by adopting sustainable forest management.");
+        strategies.add("(c) Standards will be developed and implemented for sustainable use of groundwater resources in urban areas.");
 
-        policies.add("SDG 13 Policy 1");
-        policies.add("SDG 13 Policy 2");
-        policies.add("SDG 13 Policy 3");
+        policies.add("(a) Food security, nutrition and livelihoods will be improved by adopting climate-friendly agriculture system.");
+        policies.add("(b) Sustainable environmental services will be ensured by developing climate resilient ecosystem. ");
+        policies.add("(c) Energy security will be ensured by promoting multiple use of water resources and production of low carbon energy.");
 
-        plans.add("Plan 1");
-        plans.add("Plan 2");
-        plans.add("Plan 3");
+        plans.add("(a) At the federal level, responsibilities include formulating laws, standards, and a National Adaptation Plan, developing and implementing climate change programs, internationally updating national data, and participating in global climate forums and processes.");
+        plans.add("(b) At the Provincial level, aligning policies, monitoring initiatives, and coordinating programs with federal and local levels takes place");
+        plans.add("(c) Local authorities implement policies, conduct climate programs, monitor initiatives, raise awareness, and establish youth committees all in the local level for disaster management.");
     }
 
     // Method to add a new strategy
@@ -58,7 +58,7 @@ public class Admin {
 
     // Method to display all strategies
     public void displayStrategies() {
-        System.out.println("Current Strategies:");
+        System.out.println("\nCurrent Strategies:");
         for (int i = 0; i < strategies.size(); i++) {
             System.out.println(i + ": " + strategies.get(i));
         }
@@ -272,10 +272,10 @@ public class Admin {
     }
 
     public List<String> getPlans() {
-    return plans;
+        return plans;
     }
 
     public List<String>getPolicies() {
-    return policies;
+        return policies;
     }
 }
